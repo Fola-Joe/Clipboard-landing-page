@@ -74,10 +74,18 @@ main {
 }
 h1, h2, h3 {
     color: hsl(210, 10%, 33%);
+    font-weight: 600;
+}
+h2 {
+    font-size: 1.8rem;
+}
+h3 {
+    font-size: 1.5rem;
 }
 p {
     font-weight: 400;
     color: hsl(201, 11%, 66%);
+    line-height: 1.5;
 }
 button:hover {
     cursor: pointer;
@@ -107,16 +115,16 @@ header > h2 {
     margin-bottom: 1.2rem;
     margin-top: 8rem;
 }
-header > button:nth-of-type(1) {
+header > .btn > button:nth-of-type(1) {
     margin-top: 3rem;
     background-color:  hsl(171, 66%, 44%);
     box-shadow: 0 10px 50px -20px hsl(171, 66%, 44%);
 }
-header > button:nth-of-type(2){
+header > .btn > button:nth-of-type(2){
     background-color: hsl(233, 100%, 69%);
     box-shadow: 0 10px 50px -20px hsl(233, 100%, 69%);
 }
-header > button {
+header > .btn > button {
     display: block;
     font-family: 'Bai Jamjuree', sans-serif;
     color: white;
@@ -132,15 +140,16 @@ header > button {
     margin-top: 4rem;
     padding: 0 5%;
 }
-.first-section > img {
+.first-section > .img-1 > img {
     width: 100%;
     margin-bottom: 3rem;
 }
-.first-section > h3 {
+.first-section > .write-up > h3 {
     font-size: 1.5rem;
     font-weight: 600;
+    margin-bottom: 1rem;
 }
-.first-section > p {
+.first-section > .write-up > p {
     font-size: 1rem;
     margin-bottom: 3rem;
     line-height: 1.5;
@@ -167,13 +176,13 @@ header > button {
     margin-top: 5rem;
     padding: 0 5%;
 }
-.third-section > h3 {
+.third-section > .part > h3 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 1.6rem;
 }
-.third-section > p {
+.third-section > .part > p {
     line-height: 1.5;
     margin-bottom: 3.5rem;
 }
@@ -187,20 +196,8 @@ header > button {
 .fourth-section > img {
     margin-bottom: 4rem;
 }
-.fourth-section > img:nth-of-type(1){
+.fourth-section > img{
     width: 40%;
-}
-.fourth-section > img:nth-of-type(2){
-    width: 37%;
-}
-.fourth-section > img:nth-of-type(3){
-    width: 40%;
-}
-.fourth-section > img:nth-of-type(4){
-    width: 37%;
-}
-.fourth-section > img:nth-of-type(5){
-    width: 37%;
 }
 .fifth-section {
     margin-top: 5rem;
@@ -274,4 +271,75 @@ footer > p:hover {
 }
 
 @media screen and (min-width: 960px){
+    br {
+        display: none;
+    }
+    main {
+        width: 100%;
+        max-width: 1440px;
+        padding: 0;
+    }
+    header > h1 {
+        font-size: 2.6rem;
+    }
+    header > p {
+        font-size: 1.2rem;
+        margin: 0 23%;
+    }
+    header > .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 3rem;
+    }
+    header > .btn > button {
+        width: 20%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    header > .btn > button:nth-of-type(1) {
+        margin-top: 0;
+    }
+    header > h2 {
+        font-size: 2.5rem;
+    }
+    .first-section {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+        align-items: center;
+    }
+    .write-up {
+        padding: 0 4rem;
+        text-align: left;
+    }
+    .second-section > h2 {
+        font-size: 2.4rem;
+    }
+    .second-section > p {
+        font-size: 1.2rem;
+        margin: 0 20%;
+    }
+    .second-section > img {
+        width: 70%;
+    }
+    .third-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 10%;
+        gap: 0;
+    }
+    .part {
+        padding: 0 1.6rem;
+    }
+    .fourth-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10%;
+    }
+    .fourth-section > img {
+        width: 15%;
+    }
 }
